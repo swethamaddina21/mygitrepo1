@@ -14,7 +14,7 @@ pipeline{
                     var1=10
                     if (a>= 10)
                     {
-                        println"value os a is eaual to ${a}"
+                        println "value os a is eaual to ${a}"
                     }
                 }
             }
