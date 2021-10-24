@@ -4,6 +4,9 @@ pipeline{
   batchno = "3"
   JAVA_HOME = "/opt/java"
 }
+    parameters {
+  choice choices: ['dev ', 'prod', 'preprod'], name: 'env'
+}
     stages{
         stage('name1'){
             steps{
@@ -13,6 +16,7 @@ pipeline{
                     println "hi welcome to jwnkins pipeline ${var1} ${test}"
                     println "batchno is ${env.batchno}"
                     println "java path is ${env.JAVA_HOME}"
+                    println "myenv is ${params.env}"
                 }
             }
             
