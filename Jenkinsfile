@@ -5,7 +5,8 @@ pipeline{
             steps{
                 script{
                     var1=10
-                    println "hi welcome to jwnkins pipeline ${var1}"
+                    test = "hiteam"
+                    println "hi welcome to jwnkins pipeline ${var1} ${test}"
                 }
             }
             
