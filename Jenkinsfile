@@ -12,8 +12,7 @@ pipeline{
             steps{
                 script{
                     var1=10
-                    if (a>= 10)
-                    {
+                    if (a>= 10){
                         println "value os a is eaual to ${a}"
                     }
                 }
