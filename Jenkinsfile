@@ -12,11 +12,10 @@ pipeline{
             steps{
                 script{
                     var1=10
-                    test = "hiteam"
-                    println "hi welcome to jwnkins pipeline ${var1} ${test}"
-                    println "batchno is ${env.batchno}"
-                    println "java path is ${env.JAVA_HOME}"
-                    println "myenv is ${params.env}"
+                    if (a>= 10)
+                    {
+                        println"value os a is eaual to ${a}"
+                    }
                 }
             }
             
