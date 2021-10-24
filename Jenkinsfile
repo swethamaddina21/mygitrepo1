@@ -4,7 +4,8 @@ pipeline{
         stage('name1'){
             steps{
                 script{
-                    println "hi welcome to jwnkins pipeline"
+                    var1=10
+                    println "hi welcome to jwnkins pipeline ${var1}"
                 }
             }
             
