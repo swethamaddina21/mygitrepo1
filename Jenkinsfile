@@ -4,7 +4,7 @@ pipeline{
         stage('name1'){
             steps{
                 script{
-                    echo "hi welcome to jwnkins pipeline"
+                    println "hi welcome to jwnkins pipeline"
                 }
             }
             
