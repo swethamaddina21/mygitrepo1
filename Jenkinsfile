@@ -4,13 +4,13 @@ pipeline{
         stage('name1'){
             steps{
                 script{
-                    def a = input message: 'please enter values', parameters: [string('a')]
-                    def b = input message: 'please enter values', parameters: [string('b')]
-                    def c = input message: 'please enter values', parameters: [string('c')]      
-                    if (a.toInteger()>b.toInteger() && a.toInteger()>c.toInteger()){
+                    def a.toInteger() = input message: 'please enter values', parameters: [string('a')]
+                    def b.toInteger() = input message: 'please enter values', parameters: [string('b')]
+                    def c.toInteger() = input message: 'please enter values', parameters: [string('c')]      
+                    if (a>b && a>c){
                         println " a is greater"
                     }
-                    else if (b.toInteger()>a.toInteger() && b.toInteger()>c.toInteger()){
+                    else if (b>a && b>c){
                         println "b is greater"
                     }
                     else{
