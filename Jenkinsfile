@@ -6,7 +6,7 @@ pipeline{
                 script{
                     a.toInteger = input message: 'please enter values', parameters: [string('a')]
                     b.toInteger = input message: 'please enter values', parameters: [string('b')]
-                    c.toInteger =input message: 'please enter values', parameters: [string('c')]      
+                    c.toInteger = input message: 'please enter values', parameters: [string('c')]      
                     if (a>b && a>c){
                         println " a is greater"
                     }
