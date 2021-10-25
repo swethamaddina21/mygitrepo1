@@ -10,7 +10,7 @@ pipeline{
                     if (a>b && a>c){
                         println " a is greater"
                     }
-                    if (b>a && b>c){
+                    else if (b>a && b>c){
                         println "b is greater"
                     }
                     else{
