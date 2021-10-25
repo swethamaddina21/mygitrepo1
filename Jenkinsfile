@@ -4,7 +4,7 @@ pipeline {
         stage('name1') {
             steps {
                 script {
-                    a = (input message: 'please enter values', parameters: [string('a')])
+                    /*a = (input message: 'please enter values', parameters: [string('a')])
                     b = (input message: 'please enter values', parameters: [string('b')])
                     c = (input message: 'please enter values', parameters: [string('c')])      
                     if (a>b && a>c) {
@@ -13,7 +13,7 @@ pipeline {
                     else if (b>a && b>c) {
                         println "b is greater"
                     }
-                    else {
+                    else */{
                         println "c is greater"
                     }                   
                 }                    
