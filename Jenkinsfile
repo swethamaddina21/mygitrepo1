@@ -1,24 +1,21 @@
 pipeline{
     agent any
-    environment {
-  batchno = "3"
-  JAVA_HOME = "/opt/java"
-}
-    parameters {
-  choice choices: ['dev ', 'prod', 'preprod'], name: 'env'
-}
     stages{
         stage('name1'){
             steps{
                 script{
-                    a=200
-                    if (a<= 10){
-                        println "value os a is eaual to ${a}"
+                    a.toInteger = input message: 'please enter values', parameters: [string('a')]
+                    b.toInteger = input message: 'please enter values', parameters: [string('b')]
+                    c.toInteger =input message: 'please enter values', parameters: [string('c')]      
+                    if (a>b && a>c){
+                        println " a is greater"
+                    }
+                    if (b>a && b>c){
+                        println "b is greater"
                     }
                     else{
-                        println "value of ${a} is not 10"
-                
-                    }
+                        println "c is greater"
+                    }                   
                 }                    
             }            
         }
