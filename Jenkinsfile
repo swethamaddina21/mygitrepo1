@@ -11,13 +11,16 @@ pipeline{
         stage('name1'){
             steps{
                 script{
-                    a=10
-                    if (a>= 10){
+                    a=200
+                    if (a<= 10){
                         println "value os a is eaual to ${a}"
                     }
-                }
-            }
-            
+                    else{
+                        println "value of ${a} is not 10"
+                
+                    }
+                }                    
+            }            
         }
     }
 }
