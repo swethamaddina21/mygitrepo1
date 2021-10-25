@@ -4,9 +4,9 @@ pipeline{
         stage('name1'){
             steps{
                 script{
-                    def a.toInteger() = input message: 'please enter values', parameters: [string('a')]
-                    def b.toInteger() = input message: 'please enter values', parameters: [string('b')]
-                    def c.toInteger() = input message: 'please enter values', parameters: [string('c')]      
+                    a = input message: 'please enter values', parameters: [string('a')]
+                    b = input message: 'please enter values', parameters: [string('b')]
+                    c = input message: 'please enter values', parameters: [string('c')]      
                     if (a>b && a>c){
                         println " a is greater"
                     }
