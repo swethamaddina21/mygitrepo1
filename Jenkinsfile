@@ -1,22 +1,24 @@
-pipeline {
-  agent any 
-  stages {
-    stage('working with if conditions') {
-      steps {
-        script {
-          def myval1 = input message: 'enter myval1 value', parameters: [string(defaultValue: '20', description: '', name: 'myval1', trim: false)]
-          if(myval1.toInteger() == 10) {
-            println "myval1 value is $mval1"
-          }
-          else if (myval1.toInteger() == 20)
-          {
-              println "myval1 value is $myval1"
-          }
-          else {
-              println "$myval1 not satisfies if condition"
-          }
+pipeline{
+    agent any
+    stages{
+        stage('name1'){
+            steps{
+                script{
+                    def a = (input message: 'please enter values', parameters: [string('a')])
+                    def b = (input message: 'please enter values', parameters: [string('b')])
+                    def c = (input message: 'please enter values', parameters: [string('c')])      
+                    if (a.toInteger()>b.toInteger() && a.toInteger()>c.toInteger()){
+                        println " a is greater"
+                    }
+                    else if (b.toInteger()>a.toInteger() && b.toInteger()>c.toInteger()){
+                        println "b is greater"
+                    }
+                    else{
+                        println "c is greater"
+		    }
+                                     
+                }                    
+            }            
         }
-      }
     }
-  }
 }
