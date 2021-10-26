@@ -7,7 +7,7 @@ pipeline{
 		    for (i=1;i<=10;i++){
 	                println "value of i is ${i}"
 			while(i==5){
-			    break;
+			    continue;
 			}
     	            }                               
 		    for (i in [10..15]){
